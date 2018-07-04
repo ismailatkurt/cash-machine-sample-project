@@ -16,12 +16,7 @@ class NoteService
     /**
      * @var array
      */
-    private $result = [
-        '100' => 0,
-        '50' => 0,
-        '20' => 0,
-        '10' => 0
-    ];
+    private $result = [];
 
     /**
      * @param NoteRepositoryInterface $noteRepository
@@ -35,6 +30,8 @@ class NoteService
     {
         $availableNotes = json_decode(json_encode($this->noteRepository->getAll()), true);
 
+        $this->setAvailableNotes($availableNotes);
+
         $result = $this->giveMeBiggestPossible($amount, $availableNotes);
 
         if ($result !== 0) {
@@ -44,6 +41,16 @@ class NoteService
         }
 
         return $result;
+    }
+
+    /**
+     * @param $availableNotes
+     */
+    private function setAvailableNotes($availableNotes)
+    {
+        array_walk($availableNotes, function ($k, $v) {
+            $this->result[$k] = $k;
+        });
     }
 
     private function giveMeBiggestPossible(int $amount, array $dividers)
@@ -73,5 +80,4 @@ class NoteService
 
         return $withdrawResults;
     }
-
 }

@@ -2,8 +2,8 @@
 
 namespace CashMachine\Note\Application\Services;
 
-use CashMachine\Note\Domain\NoteService as NoteDomainService;
 use CashMachine\Note\Domain\Models\NoteResult;
+use CashMachine\Note\Domain\NoteService as NoteDomainService;
 
 class NoteService
 {

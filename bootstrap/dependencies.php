@@ -1,7 +1,6 @@
 <?php
 
 use CashMachine\Bootstrap\DiKeys;
-use Symfony\Component\Yaml\Yaml;
 
 $container = $application->getContainer();
 
