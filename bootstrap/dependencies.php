@@ -1,6 +1,7 @@
 <?php
 
 use CashMachine\Bootstrap\DiKeys;
+use Symfony\Component\Yaml\Yaml;
 
 $container = $application->getContainer();
 
@@ -23,7 +24,7 @@ $container[DiKeys::APPLICATION_CONFIG] = function () use ($container) {
 
     $contents = file_get_contents(CONFIG_PATH . $file . '.yaml');
 
-    return yaml_parse($contents);
+    return Yaml::parse($contents);
 };
 
 $container[DiKeys::NOTES_CONTROLLER] = function (\Psr\Container\ContainerInterface $container) {

@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+      - ./site.conf:/etc/nginx/conf.d/site.conf
+    links:
+        - php
+  php:
+    image: php:7.2-fpm
+    volumes:
+        - .:/var/www/html
