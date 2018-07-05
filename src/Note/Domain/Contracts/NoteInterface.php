@@ -2,7 +2,9 @@
 
 namespace CashMachine\Note\Domain\Contracts;
 
-interface NoteInterface extends \JsonSerializable
+use CashMachine\Common\Domain\Contracts\ModelInterface;
+
+interface NoteInterface extends ModelInterface
 {
     /**
      * @param int $value
