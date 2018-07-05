@@ -1,6 +1,6 @@
 <?php
 
-namespace CashMachine\Common\Presentation\Controllers;
+namespace CashMachine\Common\Infrastructure\Presentation\Controllers;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

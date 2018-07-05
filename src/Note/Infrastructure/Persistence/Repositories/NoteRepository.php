@@ -36,10 +36,26 @@ class NoteRepository implements NoteRepositoryInterface
         /** @var Note[] $notes */
         $notes = [];
 
-        foreach ($this->noteConfig as $key => $value) {
-            $notes[] = $this->noteFactory->create($value);
+        foreach ($this->getNoteConfig() as $key => $value) {
+            $notes[] = $this->getNoteFactory()->create($value);
         }
 
         return $notes;
+    }
+
+    /**
+     * @return array
+     */
+    public function getNoteConfig(): array
+    {
+        return $this->noteConfig;
+    }
+
+    /**
+     * @return NoteFactory
+     */
+    public function getNoteFactory(): NoteFactory
+    {
+        return $this->noteFactory;
     }
 }

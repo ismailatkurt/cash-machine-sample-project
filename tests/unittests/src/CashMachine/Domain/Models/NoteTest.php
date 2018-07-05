@@ -5,7 +5,7 @@ namespace CashMachine\Tests\Note\Domain\Models;
 use CashMachine\Note\Domain\Models\Note;
 use PHPUnit\Framework\TestCase;
 
-class NoteServiceTest extends TestCase
+class NoteTest extends TestCase
 {
     /**
      * @test
@@ -19,6 +19,23 @@ class NoteServiceTest extends TestCase
 
         // test
         $result = $classUnderTest->getValue();
+
+        // verify
+        $this->assertEquals($value, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function jsonSerialize_test()
+    {
+        // prepare
+        $value = 1234;
+
+        $classUnderTest = new Note($value);
+
+        // test
+        $result = json_encode($classUnderTest);
 
         // verify
         $this->assertEquals($value, $result);

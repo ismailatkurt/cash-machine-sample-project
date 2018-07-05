@@ -22,7 +22,7 @@ class NoteService
 
     /**
      * @param int $amount
-     * @return array|\CashMachine\Note\Domain\Contracts\WithdrawResultInterface
+     * @return array|int|mixed
      */
     public function withDraw(int $amount)
     {

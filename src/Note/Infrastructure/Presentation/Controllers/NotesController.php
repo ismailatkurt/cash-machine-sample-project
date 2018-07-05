@@ -2,7 +2,7 @@
 
 namespace CashMachine\Note\Infrastructure\Presentation\Controllers;
 
-use CashMachine\Common\Presentation\Controllers\BaseJsonController;
+use CashMachine\Common\Infrastructure\Presentation\Controllers\BaseJsonController;
 use CashMachine\Note\Application\Services\NoteService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

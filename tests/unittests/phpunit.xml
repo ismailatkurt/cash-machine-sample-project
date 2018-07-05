@@ -8,8 +8,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
-         stopOnFailure="false"
-         syntaxCheck="true">
+         stopOnFailure="false">
     <testsuite name="Cash Machine Code Challenge">
         <exclude>../../bootstrap</exclude>
     </testsuite>
@@ -21,6 +20,6 @@
     <logging>
         <log type="coverage-text" target="php://stdout" showOnlySummary="true"/>
         <log type="coverage-clover" target="../../reports/phpunit.coverage.xml"/>
-        <log type="junit" target="../../reports/phpunit.xml" logIncompleteSkipped="false"/>
+        <log type="junit" target="../../reports/phpunit.xml"/>
     </logging>
 </phpunit>

@@ -28,7 +28,7 @@ class NoteService
 
     public function withdraw(int $amount)
     {
-        $availableNotes = json_decode(json_encode($this->noteRepository->getAll()), true);
+        $availableNotes = json_decode(json_encode($this->getNoteRepository()->getAll()), true);
 
         $this->setAvailableNotes($availableNotes);
 
@@ -49,7 +49,7 @@ class NoteService
     private function setAvailableNotes($availableNotes)
     {
         array_walk($availableNotes, function ($k, $v) {
-            $this->result[$k] = $k;
+            $this->result[$k] = 0;
         });
     }
 
@@ -79,5 +79,13 @@ class NoteService
         }
 
         return $withdrawResults;
+    }
+
+    /**
+     * @return NoteRepositoryInterface
+     */
+    public function getNoteRepository(): NoteRepositoryInterface
+    {
+        return $this->noteRepository;
     }
 }
