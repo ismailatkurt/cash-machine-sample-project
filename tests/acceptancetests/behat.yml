@@ -1,0 +1,14 @@
+default:
+    autoload: [ "%paths.base%/contexts" ]
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://local.cashmachine.com
+            goutte: ~
+            selenium2: ~
+    suites:
+        default:
+            paths:
+              - "%paths.base%/../features"
+            filters:
+            contexts:
+                - FeatureContext
