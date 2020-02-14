@@ -35,6 +35,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -478,6 +479,7 @@
                 "filter",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-filter",
             "time": "2018-04-11T16:20:04+00:00"
         },
         {
@@ -531,6 +533,7 @@
                 "inputfilter",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-inputfilter",
             "time": "2018-05-14T17:38:03+00:00"
         },
         {
@@ -599,6 +602,7 @@
                 "servicemanager",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-servicemanager",
             "time": "2018-01-29T16:48:37+00:00"
         },
         {
@@ -645,6 +649,7 @@
                 "stdlib",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-stdlib",
             "time": "2018-04-30T13:50:40+00:00"
         },
         {
@@ -716,6 +721,7 @@
                 "validator",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-validator",
             "time": "2018-02-01T17:05:33+00:00"
         }
     ],
@@ -3104,16 +3110,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.1.1",
+            "version": "v4.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "e761828a85d7dfc00b927f94ccbe1851ce0b6535"
+                "reference": "919a245e0642afa353a333d8bf3352320af85969"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/e761828a85d7dfc00b927f94ccbe1851ce0b6535",
-                "reference": "e761828a85d7dfc00b927f94ccbe1851ce0b6535",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/919a245e0642afa353a333d8bf3352320af85969",
+                "reference": "919a245e0642afa353a333d8bf3352320af85969",
                 "shasum": ""
             },
             "require": {
@@ -3171,7 +3177,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-06-25T11:12:43+00:00"
+            "time": "2019-04-16T11:21:55+00:00"
         },
         {
             "name": "symfony/dom-crawler",
